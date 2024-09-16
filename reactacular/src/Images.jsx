@@ -1,12 +1,12 @@
-    function Cat1() {
+    function Picture1() {
         return (
         <img
-            src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Cat_keyboard.jpg"
-            alt="Kitten hacking on a keyboard"
+            src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Moon_Pie_Bowl_Head.png"
+            alt="Moon Pie With A Bowl On His Head"
             />
             )
     }
-    export function Cat2() {
+    export function Picture2() {
           return (
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/2/22/Apple_computer_cat.jpg"
@@ -15,25 +15,25 @@
             )
     }
     
-    function Cat3() {
+    function Picture3() {
       return (
       <img
-      src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Cat_stares_at_itself_on_computer_monitor.jpg"
-      alt="Cat looking at itself on computer"
+      src="https://upload.wikimedia.org/wikipedia/commons/a/af/Nikfatish_Rold_Common.jpg"
+      alt="Cat with green eyes and large ears"
       />
       );
     }
 
-    export default function Gallery() {
+    export default function AllThePictures() {
         return (
-            <section>
-            <h1>The Internet. Built for Cats.</h1>
+            <section className="container">
+            <h1>Three Cat Pictures.</h1>
                 <p> Cat 1</p>
-                <Cat1 />
+                <Picture1 />
                 <p> Cat 2</p>
-                <Cat2 />
+                <Picture2 />
                 <p> Cat 3</p>
-                <Cat3 />
+                <Picture3 />
             </section>
         );
     }

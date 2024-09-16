@@ -1,6 +1,10 @@
 // Function Picture1()
 
-function Cat1() {
+// Export Default Function Picture1()
+
+
+
+function Picture1() {
     return (
     <img
         src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Cat_keyboard.jpg"
@@ -10,12 +14,11 @@ function Cat1() {
 }
 
 
-// Export Default Function Picture1()
 
-export default function App() {
+export default function Picture1() {
     return (
       <>
-        <Cat1 />
+        <Picture1 />
       </>
     );
   }

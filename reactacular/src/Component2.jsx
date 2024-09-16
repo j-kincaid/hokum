@@ -1,14 +1,6 @@
-// Import Function Picture1()
-import { Cat1 } from './Images.jsx';
+import { Picture1 } from './Component1.jsx';
 
-// Cat key:
-// 1. hacking keyboard
-// 2. playing under computer
-// 3. looking at itself on computer
-
-
-// Export Function Picture2()
-export function Cat2() {
+export function Picture2() {
     return (
     <img
       src="https://upload.wikimedia.org/wikipedia/commons/2/22/Apple_computer_cat.jpg"
@@ -17,8 +9,7 @@ export function Cat2() {
       )
 }
 
-// Function Picture3()
-function Cat3() {
+function Picture3() {
       return (
       <img
       src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Cat_stares_at_itself_on_computer_monitor.jpg"
@@ -28,24 +19,12 @@ function Cat3() {
     }
 
 
-
-// Export Default Function AllThePictures(Picture1, Picture3)
-
-export default function App() {
-
-  return (
-    <>
-      <Cat1 />
-      <Cat2 />
-      <Cat3 />
-    </>
-
-  );
-}
-//     return (
-//     <img
-//       src="https://upload.wikimedia.org/wikipedia/commons/2/22/Apple_computer_cat.jpg"
-//       alt="Cat playing under a computer"
-//       />
-//       )
-// }
+export default function AllThePictures(Picture1, Picture3) {
+	return (
+	<section>
+	<Picture1 />
+	<Picture2 />
+	<Picture3 />
+	</section>
+	);
+	}

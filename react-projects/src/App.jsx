@@ -69,7 +69,7 @@ function ManyExpressions() {
 					src="https://www.cdc.gov/healthy-pets/media/images/2024/04/Cat-on-couch.jpg"
 					alt="This is a cat"
 				/>
-        
+
 			<ul>
 				<li>He's got a face</li>
 				<li>He eats occasionally</li>

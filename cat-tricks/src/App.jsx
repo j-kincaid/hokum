@@ -37,7 +37,7 @@ function BracesInHTML() {
   return (
     <>
     <h1>{title1}.</h1>
-    <h3>Your cat can learn to do a {trick1} and it can learn to {trick2} for treats!</h3>
+    <h3>Your cat can learn to do a {trick1} and {trick2} for treats!</h3>
     </>
   );
 }
@@ -45,7 +45,7 @@ function BracesInHTML() {
 // Using curly braces for in-line CSS
 function InlineStyles() {
   return (
-		<div style={
+		<div style = {
       {
       backgroundColor: 'darkgoldenrod', 
 			color: '#fff',
@@ -55,7 +55,7 @@ function InlineStyles() {
       }
     }
     >
-<h5>You will both enjoy the challenge!</h5>
+<h5>Everyone will enjoy the challenge!</h5>
   </div>
   )
 }
@@ -64,17 +64,19 @@ function InlineStyles() {
 const catPerformer = {
   name: 'Marvin',
   theme: {
-    backgroundColor: 'white',
-    color: 'black',
+    backgroundColor: 'brown',
+    color: 'white',
+    textAlign: 'center',
   }
 };
+
 
 function CombinedExpressions() {
   const human="https://upload.wikimedia.org/wikipedia/commons/c/cc/Handshaking_with_my_master_%284303758332%29.jpg"
   const description = "Cat shaking hands with human"
   return (
     <div style={catPerformer.theme}>
-      <h3>{catPerformer.name} is a talented cat</h3>
+      <h2>{catPerformer.name} is a talented cat</h2>
     <img 
     className="cat"
     src={human}

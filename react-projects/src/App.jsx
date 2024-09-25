@@ -1,92 +1,52 @@
-function Strings() {
+function HalloweenCat() {
   return (
     <img
-      className="cat" //passed in as a string since in double quotes
-      src="https://www.cdc.gov/healthy-pets/media/images/2024/04/Cat-on-couch.jpg" //passed in as string since in double quotes
-      alt="This is a Cat"
+    className="halloweenCat"
+    src="https://i.imgur.com/5MDe0YK.jpeg"
+    alt="The Halloween Cat"
+    width={581}
+    height={436}
     />
   );
 }
 
-
-function BracesInAttributes() {
-  const image = 'https://www.cdc.gov/healthy-pets/media/images/2024/04/Cat-on-couch.jpg';
-  const description = 'This is a cat';
+function HalloweenCatWar({things, size}) {
   return (
-    <img
-      className="cat"
-      src={image}
-      alt={description}
+    <>
+      <img
+        className="halloweenCatWar"
+        src={getUrl(things)}
+        alt={getAltText(things)}
     />
+<h1>{getAltText(things)}</h1>
+    </>
+  )
+}
+
+function getAltText(things) {
+  return (
+    'This is a picture of ' +
+    things.action + 
+    ' and his name is ' +
+    things.name
   );
 }
 
-function BracesInTag() {
-  const name ='Jessica';
+function getUrl(things) {
   return (
-    <h1>{name}'s Wednesday class!</h1>
-  );
-}
-
-const today = new Date();
-function FormatDate(date) {
-  return new Intl.DateTimeFormat(
-    'en-US',
-    { weekday: 'long' }
-  ).format(date);
-}
-
-function ObjectsInJSX() {
-  return (
-		<ul style={
-		{
-			backgroundColor: 'black', //note inline css syntax differences-- needs to be in camelCase since it's JSX
-
-			color: 'pink'
-		}
-	}>
-      <li>There is a cat.</li>
-      <li>It has a face.</li>
-      <li>It eats sometimes.</li>
-    </ul>
-  );
-}
-
-const catObject = {
-  name: 'Goldfish',
-  theme: {
-    backgroundColor: 'blue',
-    color: 'orange'
-  }
-};
-
-function ManyExpressions() {
-  return (
-    <div style={catObject.theme}>
-      <h1>{catObject.name} is a cat</h1>
-				<img
-					className="cat"
-					src="https://www.cdc.gov/healthy-pets/media/images/2024/04/Cat-on-couch.jpg"
-					alt="This is a cat"
-				/>
-
-			<ul>
-				<li>He's got a face</li>
-				<li>He eats occasionally</li>
-				<li>He speaks somsetimes</li>
-			</ul>
-		</div>
+    'https://i.imgur/.com/' + 
+    things.id +
+    '.jpeg'
   );
 }
 
 export default function App() {
-	return(
-	<>
-  <Strings />
-	<BracesInAttributes />
-  <BracesInTag />
-  <h1>Today's date is: { FormatDate(today) }</h1>
-  <ObjectsInJSX />
-	</>
-	);
+  return (
+    <>
+    <HalloweenCat />
+    <HalloweenCatWar
+      things={{ name: 'Percy', action: 'the Halloween Cat', id: '5MDe0YK'}}
+      />
+      </>
+  );
 }

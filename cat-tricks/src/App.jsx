@@ -1,9 +1,4 @@
 // Assignment # 3
-// Create a component in App.jsx (or App.js) that includes:
-
-
-
-// Put all of these into separate functions, and call all the functions in the export default function of your component. If you'd like to break these up into separate files, that is totally fine.
 
 function Tricks() {
   return (
@@ -16,7 +11,9 @@ function Tricks() {
 }
 
 // Using curly braces for attributes
+
 // I want to be able to see all of the images so I reduced their size. It didn't work to assign maxWidth inline so I put it in index.css
+
 function BracesInAttributes() {
   const image = 'https://upload.wikimedia.org/wikipedia/commons/9/98/Patterned_Tabby_Cat_Standing.jpg';
   const description = 'This is a cat standing and reaching for a treat';

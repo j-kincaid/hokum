@@ -1,20 +1,31 @@
-function HalloweenCat() {
+function BeeCat() {
   return (
     <img
-    className="halloweenCat"
-    src="https://i.imgur.com/5MDe0YK.jpeg"
-    alt="The Halloween Cat"
-    width={581}
-    height={436}
+    className="beeCat"
+    src="https://imgur.com/9uGZxCw"
+    alt="Bee Cat rolling off a bed"
+    width={280}
+    height={300}
     />
   );
 }
 
-function HalloweenCatWar({things, size}) {
+function ScaredyCat() {
+  return (
+    <img
+    className="beeCat"
+    src="https://imgur.com/gallery/bee-cat-jn5e6ef"
+    alt="Black cat running from something"
+    width={280}
+    height={300}
+    />
+  );
+}
+function BeeCatCostume({things, size}) {
   return (
     <>
       <img
-        className="halloweenCatWar"
+        className="beeCatCostume"
         src={getUrl(things)}
         alt={getAltText(things)}
     />
@@ -27,14 +38,14 @@ function getAltText(things) {
   return (
     'This is a picture of ' +
     things.action + 
-    ' and his name is ' +
-    things.name
+    ' and they are from ' +
+    things.origin
   );
 }
 
 function getUrl(things) {
   return (
-    'https://i.imgur/.com/' + 
+    'https://imgur.com/' + 
     things.id +
     '.jpeg'
   );
@@ -43,10 +54,16 @@ function getUrl(things) {
 export default function App() {
   return (
     <>
-    <HalloweenCat />
-    <HalloweenCatWar
-      things={{ name: 'Percy', action: 'the Halloween Cat', id: '5MDe0YK'}}
-      />
-      </>
-  );
+    <BeeCat />
+      <BeeCatCostume
+        things={{ origin: 'Birmingham', action: 'a Bee Cat', id: '9uGZxCw'}}
+        />
+    <ScaredyCat />
+      <BeeCatCostume
+        things={{ origin: 'Austin', action: 'a Scaredy Cat', id: '2uro99U'}}
+        />
+
+
+        </>
+    );
 }

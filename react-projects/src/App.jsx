@@ -5,7 +5,7 @@ function BeeCat() {
     <img
     className="beeCat"
     src="https://imgur.com/9uGZxCw"
-    alt="Bee Cat rolling off a bed"
+    alt="A cat dressed as a bee rolling off a bed"
     width={280}
     height={300}
     />
@@ -17,7 +17,7 @@ function GamerCat() {
     <img
     className="beeCat"
     src="https://imgur.com/jhcN1Ke"
-    alt="Cat playing an ingenious game"
+    alt="A cat playing an ingenious game"
     width={280}
     height={300}
     />
@@ -29,7 +29,7 @@ function CarpetShark() {
     <img
     className="beeCat"
     src="https://imgur.com/UXCBWlW"
-    alt="Black cat running from something"
+    alt="Cat scooting on carpet while wearing slipper"
     width={280}
     height={300}
     />
@@ -41,7 +41,7 @@ function LittleCat() {
     <img
     className="beeCat"
     src="https://imgur.com/O3EIPHp"
-    alt="A little cat"
+    alt="A very cute little cat clapping its paws"
     width={500}
     height={500}
     />
@@ -53,7 +53,7 @@ function PirateCat() {
     <img
     className="beeCat"
     src="https://imgur.com/ZZpVeoY"
-    alt="Cat dressed as a pirate"
+    alt="A cat dressed as a pirate and walking toward the camera"
     width={500}
     height={500}
     />
@@ -93,7 +93,7 @@ function getUrl(things) {
 export default function App() {
   return (
     <>
-    <h1>Cats in costumes and cats doing odd things</h1>
+    <h1>Gallery of cats in costumes and cats doing odd things</h1>
     <BeeCat />
       <BeeCatCostume
         things={{ origin: 'Seattle', action: 'a Bee Cat', id: '9uGZxCw'}}

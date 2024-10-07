@@ -1,67 +1,57 @@
-const currentHour = 18;
+const d = new Date();
+const currentHour = d.getHours() + 1; 
+// const currentHour = 18;
 const greeting = "";
-const greetingStyle = "";
-function ColorTimeOriginal({ currentHour, greeting}) {
-  return <h1 className="day">{currentHour}</h1>
-}
-function ColorTimeWithChecks({ currentHour, greeting}) {
-  if (greeting) {
-    return <li className="day">{currentHour} + ' ' + {greeting}</li>
-  }
-  return <li className="day">{currentHour}</li>
-}
-
-function ToIgnore({ currentHour, greeting}) {  
-  if (!currentHour) {
-    return null;
-  }
-  return <li className="day">{greeting}</li>
-}
+let greetingStyle = "greeting.style.color";
 
 
-function ColorHourTernary({ currentHour, greeting }) {
+// if currentHour is within these values ? use these colors and verbiage:
+
+// {greeting ? (currentHour >= 6 && currentHour <= 12) : (greetingStyle = "orange") } 
+// {greeting ? (currentHour > 12 && currentHour <= 18) : (greetingStyle = "blue") } 
+// {greeting ? (currentHour > 18 && currentHour <= 24) : (greetingStyle = "purple") }
+// {greeting ? (currentHour > 24 && currentHour <= 1) : (greetingStyle = "darkblue") }
+
+
+
+function ColorTimeTernary({ currentHour, greeting }) {
   return (
     <h1 className="day">
 
-     {greeting ? (currentHour >= 6 && currentHour <= 12) : (greetingStyle = "orange") } 
-     {greeting ? (currentHour > 12 && currentHour <= 18) : (greetingStyle = "blue") } 
-     {greeting ? (currentHour > 18 && currentHour <= 24) : (greetingStyle = "purple") }
-     {greeting ? (currentHour > 24 && currentHour <= 0) : (greetingStyle = "darkblue") }
-  
+     {/* {greeting ? (currentHour >= 6 && currentHour <= 12) : (greeting) }  */}
+     {/* {greeting ? (currentHour > 12 && currentHour <= 18) : (greeting) }  */}
+     {/* {greeting ? (currentHour > 18 && currentHour <= 24) : (greeting) }  */}
+     {greeting}
     </h1>
   );
 }
 
-
       export default function MycurrentHour() {
         return (
           <section>
-            <ColorTimeOriginal
-            currentHour
-            greeting="Good Morning"
-            />
-            <ColorTimeWithChecks
-            currentHour
-            greeting="Good Afternoon"
-            />
+
             <ColorHourTernary
-              currentHour
+              currentHour={7}
               greeting = "Good Morning"
+              greetingStyle = 'orange'
               />
 
             <ColorHourTernary
               currentHour={14}
               greeting = "Good Afternoon"
+              greetingStyle = 'blue'
               />
 
             <ColorHourTernary
               currentHour={21}
-              greeting = "Good Afternoon"
+              greeting = "Good Afternoon" 
+              greetingStyle = 'purple'
               />
 
             <ColorHourTernary
               currentHour={2}
               greeting = "Good Night"
+              greetingStyle = 'darkblue'
               />
             </section>
         )

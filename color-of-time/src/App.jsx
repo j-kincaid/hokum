@@ -10,7 +10,7 @@ let greetingStyle = "greeting.style.color";
 // {greeting ? (currentHour >= 6 && currentHour <= 12) : (greetingStyle = "orange") } 
 // {greeting ? (currentHour > 12 && currentHour <= 18) : (greetingStyle = "blue") } 
 // {greeting ? (currentHour > 18 && currentHour <= 24) : (greetingStyle = "purple") }
-// {greeting ? (currentHour > 24 && currentHour <= 1) : (greetingStyle = "darkblue") }
+// {greeting ? (currentHour > 24 && currentHour <= 6) : (greetingStyle = "darkblue") }
 
 
 

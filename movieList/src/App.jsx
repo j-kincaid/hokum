@@ -36,15 +36,14 @@ function SciFiMovies() {
 // change the color of those movies to be red. 
 // <li style={{color: nameOfArray.genre === nameOfGenreConst ? 'red' : 'black', }}
 
-  const filteredItems = movies.map(movies => 
-    <li key = {movies.id}
-     style={{ color: movies.genre === science ? 'red' : 'black' }} >
+  const listItems = movies.map(movies => 
+    <li key = {movies.id} style={{ color: movies.genre === 'Sci-Fi' ? 'red' : 'black' }}>
      <b>{movies.title}</b>   ({movies.genre})  - Rating: {movies.rating}</li>
   );
 
   return (
     <ul>
-    {filteredItems}
+    {listItems}
     </ul>
     );
   }

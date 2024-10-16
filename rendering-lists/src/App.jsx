@@ -54,7 +54,7 @@ const characters = [{
 
 const starfish = characters.filter(filteredCharacter =>
 	filteredCharacter.species === 'Starfish'
-	); 
+	);
   // Saves the species that are specifically starfish
 
 	// filter.rating >= 8.8

@@ -32,18 +32,26 @@
     //   JS change textContent;
 
     function ButtonThree() {
+      return (
+        <button className="b3">
+          Click to disable
+        </button>
+      );
+    }
+
+    function ButtonThreeHandler() {
       function handleClick() {
-        button.disabled="True"
+        button.b3.disabled="true"
         button.b3.textContent="Disabled button"
       }
         return (
           <button className="b3" onClick={handleClick}>
-            click to disable
+            Click to disable
           </button>
         );
       }
 
-    
+  
 
       
     //   return (

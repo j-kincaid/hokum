@@ -33,29 +33,19 @@
 
     function ButtonThree() {
       function handleClick() {
-        button.b3.disabled="True";
-        button.b3.textContent="Disabled button";
+        button.disabled="True"
+        button.b3.textContent="Disabled button"
       }
-      
-
-      // function ButtonThree({message, Enabled}) {
-      //   function handleClick() {
-      //     <ButtonThree>
-      //       Disable
-      //     </ButtonThree>
-      //   }
-
-
-      function ToDisableButtonThree ({ message, enabled }) {
         return (
-          <button className="b3">
-
-            {enabled ? message = 'Click to disable' :  message}
+          <button className="b3" onClick={handleClick}>
+            click to disable
           </button>
         );
       }
 
-      }
+    
+
+      
     //   return (
     //     <button className="b3" onClick={handleClick}>
     //     Disable me
@@ -95,3 +85,4 @@
        
       )
     }
+    

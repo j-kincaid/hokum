@@ -27,41 +27,27 @@
 
     // Button 3: Create a button that becomes disabled and changes the text when it is clicked.
 
-    // function Button3() {
-    //   JS disable this button;
-    //   JS change textContent;
 
-    function ButtonThree() {
-      return (
-        <button className="b3">
-          Click to disable
-        </button>
+
+  function ButtonThree() {
+    // JS disable this button;
+    return (
+      <button>
+        Click to disable
+      </button>
+    );
+  }
+
+  function ButtonThreeHandlerProps(message, children) {
+    // JS change textContent;
+        return (
+          <button onClick={() => button.textContent={message}}>
+            {children}
+          </button>
       );
     }
 
-    function ButtonThreeHandler() {
-      function handleClick() {
-        button.b3.disabled="true"
-        button.b3.textContent="Disabled button"
-      }
-        return (
-          <button className="b3" onClick={handleClick}>
-            Click to disable
-          </button>
-        );
-      }
-
   
-
-      
-    //   return (
-    //     <button className="b3" onClick={handleClick}>
-    //     Disable me
-    //     </button>
-    //   );
-    // }
-
-
     // Button 4: Create a button that triggers an alert when it is DOUBLE clicked.
 
 
@@ -77,17 +63,22 @@
       );
     }
 
-
-
     export default function App() {
 
       return (
       
         <>
-        <h1>I am stuck on Button 3 but the others are ok</h1>
         <ButtonOne />
         <ButtonTwo />
         <ButtonThree />
+        <div>
+          <ButtonThreeHandlerProps message="Disabled Button">
+            Click to disable
+          </ButtonThreeHandlerProps>
+
+        </div>
+        
+ 
         <ButtonFour />
         </>
        

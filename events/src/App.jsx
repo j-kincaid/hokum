@@ -28,27 +28,53 @@
     // Button 3: Create a button that becomes disabled and changes the text when it is clicked.
 
 
-
-  function ButtonThree() {
-    // JS disable this button;
-    return (
-      <button>
-        Click to disable
-      </button>
-    );
+function ButtonThree() {
+  function handleChangeClick() {
+    <button>
+      {message}
+    </button>
   }
 
-  function ButtonThreeHandlerProps(message, children) {
-    // JS change textContent;
-        return (
-          <button onClick={() => button.textContent={message}}>
-            {children}
-          </button>
-      );
-    }
+    // ButtonThreeHandler was the part that was almost exactly what it needed to be.
 
-  
-    // Button 4: Create a button that triggers an alert when it is DOUBLE clicked.
+    // function ButtonThreeHandler(event) {
+    //   event.target.disabled = true;
+    //   event.target.innerText = "I cannot be clicked!";
+    //   }
+
+
+    return (
+      <button onClick={handleChangeClick}>
+        Disable Me
+      </button>
+    );
+}
+    // function ButtonThreeHandlerProps(message, children) {
+    //   // JS change textContent;
+    //       return (
+    //         <button onClick={() => button.textContent={message}}>
+    //           {children}
+    //         </button>
+    //     );
+      
+    // function ButtonThree(onClick) {
+    //    function handleDisableClick() {
+    //     <button onClick={() => .disabled = true;
+    //     <button onClick={() => textContent = "I am changed!"
+    //   }
+    //   }
+
+      // function ButtonThreeHandlerProps(message, children) {
+      //   // JS change textContent;
+      //       return (
+      //         <button onClick={() => button.textContent={message}}>
+      //           {children}
+      //         </button>
+      //     );
+      //   }
+
+
+{/* Button 4: Create a button that triggers an alert when it is DOUBLE clicked. */}
 
 
     function ButtonFour() {
@@ -68,20 +94,12 @@
       return (
       
         <>
+        <h1>It seems so simple and yet.</h1>
         <ButtonOne />
         <ButtonTwo />
         <ButtonThree />
-        <div>
-          <ButtonThreeHandlerProps message="Disabled Button">
-            Click to disable
-          </ButtonThreeHandlerProps>
-
-        </div>
-        
- 
         <ButtonFour />
         </>
-       
       )
     }
     

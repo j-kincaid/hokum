@@ -1,126 +1,51 @@
-import { useState } from 'react' 
+// import { useState } from 'react';
+import { useState } from 'react';
 
-const characterList = [{
-  name: 'Spongebob',
-  house: 'Pineapple',
-  species: 'Sponge'
-}, {
-  name: 'Squidward',
-  house: 'Face',
-  species: 'Squid'
-}, {
-  name: 'Patrick',
-  house: 'Rock',
-  species: 'Starfish'
-}];
 
-function ThisFunctionWillNotWork() {
-  var index=0;
-// We need to keep track of new data and update
+// Create a counter using states. The counter should feature an increment button (+1), a decrement button (-1), and a reset button (0).
 
-  function handleClick() {
-    index = index + 1;
-  }
-  var characters = characterList[index];
+// React Hooks start with "use" and start at the top of your code. 
 
-  return (
-    <>
-      <h1> ----------------------------- </h1>
-      <button onClick={handleClick}>
-        Next
-      </button>
-      <h2>
-        <i>{characters.name} </i>
-          lives in a {characters.house}.
-      </h2>
-
-      <h3>
-        ({index+1} of {characterList.length})
-      </h3>
-
-      <p>
-        {characters.name} is a {characters.species}.
-      </p>
-    </>
-  )
-}
-
-function ThisFunctionWillWork() {
+function Counter() {
   const [index, setIndex] = useState(0);
-// setIndex triggers the re-render
+  // We want State to remember index and setIndex.
 
-  function handleClick() {
-    setIndex(index + 1); // 1 is saved in useState
-  }
 
-  var characters = characterList[index];
-
-  return (
-    <>
-      <h1> ----------------------------- </h1>
-      <button onClick={handleClick}>
-        Next
-      </button>
-      <h2>
-        <i>{characters.name} </i>
-        lives in a {characters.house}.
-      </h2>
-
-      <h3>
-        ({index+1} of {characterList.length})
-      </h3>
-
-      <p>
-        {characters.name} is a {characters.species}.
-      </p>
-    </>
-  )
-}
-
-function MultipleStates() {
-  const [index, setIndex] = useState(0);
-  const [speciesToClick, setSpeciesToClick] = useState(false);
-
-  function handleClick() {
+  function handleIncrement() {
     setIndex(index + 1);
   }
 
-  function handleSpeciesClick() {
-    setSpeciesToClick(!speciesToClick);
+//           function handleDecrement()
+  function handleDecrement() {
+      setIndex(index - 1);
   }
 
-  var characters = characterList[index];
+//           function reset()
 
-  return (
-    <>
-      <h1> ----------------------------- </h1>
-      <button onClick={handleClick}>
-        Next
-      </button>
-      <h2>
-        <i>{characters.name} </i>
-        lives in a {characters.house}.
-      </h2>
-
-      <h3>
-        ({index+1} of {characterList.length})
-      </h3>
-      <button onClick={handleSpeciesClick}>
-    {/* speciesToClick starts as showing (false) but when you click the button it hides */}
-        {speciesToClick ? 'Hide' : 'Show'} species
-      </button>
-			{speciesToClick && <p>{characters.name} is a {characters.species}.</p>} 
-      {/* everything after && is always true */}
-    </>
-  )
+function handleReset() {
+  setIndex(0);
 }
 
+return (
+  <>
+    <h1>Counter: {index}</h1>
+    <button onClick={handleIncrement}>
+    Increment
+    </button>
+    <button onClick={handleDecrement}>
+    Decrement
+    </button>
+    <button onClick={handleReset}>
+    Reset
+    </button>
+    </>
+)
+}
 export default function App() {
-  return (
-    <>
-    <ThisFunctionWillWork />
-    <ThisFunctionWillNotWork />
-    <MultipleStates />
-    </>
-  )
+
+    return (
+        <Counter />
+      )
 }
+
+

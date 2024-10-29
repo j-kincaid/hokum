@@ -37,7 +37,7 @@
           <button onClick={handleClick}>
               Disable Me
           </button>
-      )
+      );
     }
 
 

@@ -28,50 +28,17 @@
     // Button 3: Create a button that becomes disabled and changes the text when it is clicked.
 
 
-function ButtonThree() {
-  function handleChangeClick() {
-    <button>
-      {message}
-    </button>
-  }
-
-    // ButtonThreeHandler was the part that was almost exactly what it needed to be.
-
-    // function ButtonThreeHandler(event) {
-    //   event.target.disabled = true;
-    //   event.target.innerText = "I cannot be clicked!";
-    //   }
-
-
-    return (
-      <button onClick={handleChangeClick}>
-        Disable Me
-      </button>
-    );
-}
-    // function ButtonThreeHandlerProps(message, children) {
-    //   // JS change textContent;
-    //       return (
-    //         <button onClick={() => button.textContent={message}}>
-    //           {children}
-    //         </button>
-    //     );
-      
-    // function ButtonThree(onClick) {
-    //    function handleDisableClick() {
-    //     <button onClick={() => .disabled = true;
-    //     <button onClick={() => textContent = "I am changed!"
-    //   }
-    //   }
-
-      // function ButtonThreeHandlerProps(message, children) {
-      //   // JS change textContent;
-      //       return (
-      //         <button onClick={() => button.textContent={message}}>
-      //           {children}
-      //         </button>
-      //     );
-      //   }
+    function ButtonThree() {
+      function handleClick(event) {
+           event.target.disabled = true;
+           event.target.innerText = "I cannot be clicked!";
+      }
+      return (
+          <button onClick={handleClick}>
+              Disable Me
+          </button>
+      )
+    }
 
 
 {/* Button 4: Create a button that triggers an alert when it is DOUBLE clicked. */}
@@ -94,7 +61,7 @@ function ButtonThree() {
       return (
       
         <>
-        <h1>It seems so simple and yet.</h1>
+        <h1>Debugged!</h1>
         <ButtonOne />
         <ButtonTwo />
         <ButtonThree />

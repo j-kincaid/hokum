@@ -10,7 +10,6 @@ function Counter() {
   const [index, setIndex] = useState(0);
   // We want State to remember index and setIndex.
 
-
   function handleIncrement() {
     setIndex(index + 1);
   }
@@ -30,10 +29,13 @@ return (
   <>
     <h1>Counter: {index}</h1>
     <button onClick={handleIncrement}>
-    Increment
+    Peach
+    </button>
+    <button onClick={handleIncrement}>
+    Red
     </button>
     <button onClick={handleDecrement}>
-    Decrement
+    Remove
     </button>
     <button onClick={handleReset}>
     Reset

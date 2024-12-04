@@ -1,34 +1,34 @@
 
 
-function BeeCat() {
+function Malaysia() {
   return (
     <img
-    className="beeCat"
-    src="https://imgur.com/9uGZxCw"
-    alt="A cat dressed as a bee rolling off a bed"
+    className="flag"
+    src="https://imgur.com/ViRKEIZ"
+    alt="Scene from Kuala Lumpur"
     width={280}
     height={300}
     />
   );
 }
 
-function GamerCat() {
+function Spain() {
   return (
     <img
-    className="beeCat"
-    src="https://imgur.com/jhcN1Ke"
-    alt="A cat playing an ingenious game"
+    className="flag"
+    src="https://imgur.com/ttMADwx"
+    alt="A cat rainy night in Madrid"
     width={280}
     height={300}
     />
   );
 }
 
-function CarpetShark() {
+function Estonia() {
   return (
     <img
     className="beeCat"
-    src="https://imgur.com/UXCBWlW"
+    src="https://imgur.com/x1EbrqF"
     alt="Cat scooting on carpet while wearing slipper"
     width={280}
     height={300}
@@ -60,11 +60,11 @@ function PirateCat() {
   );
 }
 
-function BeeCatCostume({things, size}) {
+function FlashCardPic({things, size}) {
   return (
     <>
       <img
-        className="beeCatCostume"
+        className="FlashCardPic"
         src={getUrl(things)}
         alt={getAltText(things)}
     />
@@ -93,29 +93,29 @@ function getUrl(things) {
 export default function App() {
   return (
     <>
-    <h1>Gallery of cats in costumes and cats doing odd things</h1>
-    <BeeCat />
-      <BeeCatCostume
-        things={{ origin: 'Seattle', action: 'a Bee Cat', id: '9uGZxCw'}}
+    <h3>Here are the Capital cities of nations from around the world. Name the Countries!</h3>
+    <Malaysia />
+      <FlashCardPic
+        things={{ origin: 'Kuala Lumpur', action: 'scene', id: 'ViRKEIZ'}}
         />
 
-    <GamerCat />
-      <BeeCatCostume
-        things={{ origin: 'Austin', action: 'a Gamer Cat', id: 'jhcN1Ke'}}
+    <Spain />
+      <FlashCardPic
+        things={{ origin: 'Madrid', action: 'a Rainy Day', id: 'ttMADwx'}}
         />
 
-    <CarpetShark />
-      <BeeCatCostume
-        things={{ origin: 'Nashville', action: 'a carpet shark', id: 'UXCBWlW'}}
+    <Estonia />
+      <FlashCardPic
+        things={{ origin: 'Tallinn', action: 'view from above', id: 'x1EbrqF'}}
         />
 
     <LittleCat />
-      <BeeCatCostume
+      <FlashCardPic
         things={{ origin: 'Duluth', action: 'a little cat', id: 'O3EIPHp'}}
         />
 
     <PirateCat />
-          <BeeCatCostume
+          <FlashCardPic
             things={{ origin: 'Baltimore', action: 'a pirate cat', id: 'ZZpVeoY'}}
             />
         </>
